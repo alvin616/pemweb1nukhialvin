@@ -1,9 +1,7 @@
 <?php
-// ===============================
 // Bagian 1: Penentuan Grade
-// ===============================
 
-$nilai = 85; // bisa diubah sesuai kebutuhan
+$nilai = 95; // bisa diubah sesuai kebutuhan
 
 if ($nilai >= 90 && $nilai <= 100) {
     $grade = "A";
@@ -20,9 +18,8 @@ if ($nilai >= 90 && $nilai <= 100) {
 }
 
 echo "Nilai Anda adalah $nilai, Grade Anda adalah $grade.<br>";
-// ===============================
+
 // Bagian 2: Keterangan Kelulusan (Switch)
-// ===============================
 
 switch ($grade) {
     case "A":
@@ -44,10 +41,7 @@ switch ($grade) {
 }
 echo "Keterangan Kelulusan: $keterangan.<br>";
 
-
-// ===============================
 // Bagian 3: Operator Ternary
-// ===============================
 
 $prioritas_bimbingan = ($grade == "D" || $grade == "E") 
                         ? "Wajib Bimbingan" 
@@ -55,6 +49,3 @@ $prioritas_bimbingan = ($grade == "D" || $grade == "E")
 
 echo "Status Bimbingan: $prioritas_bimbingan.";
 ?>
-
-
-
