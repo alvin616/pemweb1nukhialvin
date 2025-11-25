@@ -9,7 +9,8 @@
 <body>
     <header>
         <ul>
-            <li></li>
+            <li> home</li>
+            <li>about</li>
         </ul>
     </header>
     <h1>Judul</h1>
