@@ -6,7 +6,7 @@
     <title>For</title>
     <style>
         table, th, td {
-            border: 1px solid black;
+            border: 1px solid white;
             border-collapse: collapse;
             padding: 8px;
             text-align: left;
@@ -24,7 +24,7 @@
         </thead>
         <tbody>
             <?php
-            for ($i = 1; $i <= 15; $i++) {
+            for ($i = 1; $i <= 20; $i++) {
                 echo "<tr>";
                 echo "<td>" . $i . "</td>";
                 echo "<td>Nama " . $i . "</td>";
