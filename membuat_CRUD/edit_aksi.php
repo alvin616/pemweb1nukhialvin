@@ -2,16 +2,15 @@
 // koneksi database
 include 'koneksi.php';
 
-// menangkap data yang di kirim dari form
-$id     = $_POST['id'];
-$nama   = $_POST['nama'];
-$nis    = $_POST['nim'];
-$alamat = $_POST['alamat'];
+//menangkap data yang di kirim dari form
+$nama = $_POST['nama'];
+$nim = $_POST['nim'];
+$tempat_tinggal = $_POST['tempat tinggal'];
 
 // update data ke database
-mysqli_query($koneksi, "UPDATE siswa SET nama='$nama', nis='$nis', alamat='$alamat' WHERE id='$id'");
+mysqli_query($koneksi,"update siswaa set nama='$nama',nim='$nim',tempat tinggal='$tempat_tinggal')");
 
-// mengalihkan halaman kembali ke index.php
-header("Location: index.php");
+// mengalihkan halaman kembalike index.php
+header("location:index.php");
 
 ?>

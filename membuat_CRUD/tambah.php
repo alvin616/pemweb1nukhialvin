@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html 
 <head>
-    <title></title>
+     <title></title>
 </head>
 <body>
 
-<h2>SI Sekolahh | Tambah Data Siswaa</h2>
+<h2>SI Sekolah | Tambah Data Siswa</h2>
 <br/>
-<a href="index.php">Halaman Utama</a>
-<br/><br/>
-
+<br/>
 <h3>Tambah Data Siswa</h3>
-<form method="post" action="tambah_aksi.php">
+<form methode="post" action="tambah_aksi.php">
     <table>
         <tr>
             <td>Nama</td>
-            <td><input type="text" name="nama"></td>
+            <td><input type= "text" nama="nama"></td>
+
         </tr>
         <tr>
-            <td>NIS</td>
-            <td><input type="number" name="nim"></td>
+            <td>NIM</td>
+            <td><input type= "number" nim="nim"></td>
         </tr>
         <tr>
-            <td>Alamat</td>
-            <td><input type="text" name="tempat tinggal"></td>
+            <td>Tempat_tinggal</td>
+            <td><input type= "text" Tempat_tinggal="tempat tinggal"></td>
         </tr>
         <tr>
             <td></td>
@@ -31,6 +30,6 @@
         </tr>
     </table>
 </form>
-
+    
 </body>
 </html>
