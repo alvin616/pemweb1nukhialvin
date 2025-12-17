@@ -12,5 +12,5 @@ mysqli_query($koneksi, "UPDATE siswa SET
     alamat='$alamat'
     WHERE id='$id'");
 
-header("location:index.php");
+header("location:tabel.php");
 ?>

@@ -25,7 +25,7 @@
             <td></td>
             <td>
                 <input type="submit" value="SIMPAN">
-                <a href="index.php">Kembali</a>
+                <a href="tabel.php">Kembali</a>
             </td>
         </tr>
     </table>

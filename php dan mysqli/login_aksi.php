@@ -14,6 +14,6 @@ if (mysqli_num_rows($query) > 0) {
     $_SESSION['username'] = $data['username'];
     header("location:sukses_login.php");
 } else {
-    header("location:index.php");
+    header("location:tabel.php");
 }
 ?>

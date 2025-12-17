@@ -8,5 +8,5 @@ $id = $_GET['id'];
 mysqli_query($koneksi, "DELETE FROM siswa WHERE id='$id'");
 
 // kembali ke halaman utama
-header("location:index.php");
+header("location:tabel.php");
 ?>
