@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-// cek apakah user sudah login
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
@@ -9,31 +7,50 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <title>Berhasil Login</title>
+    <title>Data Mahasiswa</title>
 </head>
 <body>
 
-<div class="container-logout">
-    <form action="logout.php" method="POST" class="login-email">
-        <h1>
-            Selamat Datang,
-            <?php echo htmlspecialchars($_SESSION['username']); ?>!
-        </h1>
+<h2>SI Sekolah | Data Mahasiswa</h2>
+<p>Login sebagai: <b><?php echo $_SESSION['username']; ?></b></p>
 
-        <div class="input-group">
-            <button type="submit" class="btn">Logout</button>
-        </div>
-    </form>
-</div>
+<a href="tambah.php">+ Tambah Data</a>
+<a href="logout.php">Logout</a>
+<br><br>
+
+<table border="1">
+    <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Alamat</th>
+        <th>Opsi</th>
+    </tr>
+
+<?php
+include 'koneksi.php';
+$no = 1;
+$query = mysqli_query($koneksi, "SELECT * FROM siswa");
+while ($data = mysqli_fetch_array($query)) {
+?>
+    <tr>
+        <td><?php echo $no++; ?></td>
+        <td><?php echo $data['nama']; ?></td>
+        <td><?php echo $data['nim']; ?></td>
+        <td><?php echo $data['alamat']; ?></td>
+        <td>
+            <a href="edit.php?id=<?php echo $data['id']; ?>">EDIT</a>
+            <a href="hapus.php?id=<?php echo $data['id']; ?>"
+            onclick="return confirm('Yakin ingin menghapus data ini?')">
+            HAPUS
+            </a>
+        </td>
+    </tr>
+<?php } ?>
+
+</table>
 
 </body>
 </html>

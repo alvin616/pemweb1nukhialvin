@@ -1,36 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="login">
 
-<h2>Register Akun</h2>
-
-<form action="register_aksi.php" method="POST">
-    <table>
-        <tr>
-            <td>Username</td>
-            <td><input type="text" name="username" required></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="email" name="email" required></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" required></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <button type="submit">Daftar</button>
-                <a href="index.php">Kembali</a>
-            </td>
-        </tr>
-    </table>
-</form>
+<div class="container">
+    <h1>Register</h1>
+    <form action="register_aksi.php" method="POST">
+        <div class="input-group">
+            <input type="text" name="username" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn">Daftar</button>
+        </div>
+        <p class="login-register-text">
+            Sudah punya akun? <a href="login.php">Login</a>
+        </p>
+    </form>
+</div>
 
 </body>
 </html>
